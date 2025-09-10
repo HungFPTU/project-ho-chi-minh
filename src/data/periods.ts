@@ -19,6 +19,11 @@ export type Period = {
         "Học Quốc học, Hán học; bước đầu tiếp cận văn hoá phương Tây.",
         "Những năm tháng này có ý nghĩa rất quan trọng đối với sự hình thành con người Nguyễn Ái Quốc – Hồ Chí Minh."
       ],
+      gallery: [
+        "/images/truoc-1911-2.png" ,
+        "/images/truoc-1911-3.png",
+        "/images/truoc-1911-4.png",
+      ],
     },
     {
       id: "1911-1920",
@@ -32,8 +37,8 @@ export type Period = {
       ],
       gallery: [
         "/images/ra-di-tim-duong-cuu-nuoc.png" ,
-        "/images/bac-ho-ra-di-tim-duong-cuu-nuoc-thumb.png",
         "/images/maxresdefault.png",
+        "/images/cuu-nuoc3.png",
       ],
       highlight: [
         "Chuyển biến về chất trong tư tưởng:",
@@ -54,7 +59,12 @@ export type Period = {
         "Cuối 1924 về Quảng Châu: sáng lập Hội Việt Nam Cách mạng Thanh niên, mở lớp huấn luyện, đào tạo cán bộ.",
         "Tháng 2/1930: chủ trì hợp nhất các tổ chức cộng sản, thành lập Đảng Cộng sản Việt Nam.",
         "Trực tiếp thảo *Chánh cương vắn tắt, Sách lược vắn tắt, Chương trình và Điều lệ vắn tắt*; cùng với *Bản án chế độ thực dân Pháp* (1925), *Đường Kách mệnh* (1927)."
-      ]
+      ],
+      gallery: [
+        "/images/1921-1930-2.png" ,
+        "/images/1921-1930-3.png",
+        "/images/1921-1930-4.png",
+      ],
     },
     {
       id: "1930-1945",

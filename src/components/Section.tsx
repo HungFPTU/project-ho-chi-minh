@@ -1,14 +1,6 @@
-import { useState } from "react";
 import type { Period } from "../data/periods";
 
 export default function Section({ title, years, image, bullets, highlight, gallery }: Period) {
-  const [open, setOpen] = useState(false);
-  const [activeSrc, setActiveSrc] = useState<string | null>(null);
-
-  const openLightbox = (src: string) => {
-    setActiveSrc(src);
-    setOpen(true);
-  };
 
   return (
     <section id={years} className="scroll-mt-24 my-12">
@@ -18,10 +10,9 @@ export default function Section({ title, years, image, bullets, highlight, galle
             <img
               src={image}
               alt={`${title} - ${years}`}
-              className="w-full sm:w-44 md:w-52 lg:w-60 xl:w-66 h-32 sm:h-32 md:h-36 lg:h-40 xl:h-48 object-cover rounded-lg cursor-zoom-in shadow-md hover:shadow-lg transition-shadow duration-300 border border-national-gold/20"
-              onClick={() => openLightbox(image)}
+              className="w-full sm:w-44 md:w-52 lg:w-60 xl:w-66 h-32 sm:h-32 md:h-36 lg:h-40 xl:h-48 object-contain rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-national-gold/20 hover:border-national-gold/40 bg-national-gold/5"
             />
-            <div className="absolute -top-2 -right-2 bg-national-red text-white text-xs px-2 py-1 rounded-full font-medium shadow-sm">
+            <div className="absolute -top-2 -right-2 bg-national-red text-white text-xs px-2 py-1 rounded-full font-medium shadow-sm z-10">
               {years}
             </div>
           </div>
@@ -58,45 +49,18 @@ export default function Section({ title, years, image, bullets, highlight, galle
             <h3 className="text-lg font-semibold text-national-navy mb-4 font-display">Hình ảnh minh họa</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {gallery.map((src, i) => (
-                <div key={i} className="relative group">
+                <div key={i} className="relative">
                   <img
                     src={src}
                     alt={`${title} - minh họa ${i + 1}`}
-                    className="w-full h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 2xl:h-54 object-cover rounded-lg cursor-zoom-in shadow-md hover:shadow-xl transition-all duration-300 border border-national-gold/20 hover:border-national-gold/40"
-                    onClick={() => openLightbox(src)}
+                    className="w-full h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 2xl:h-54 object-contain rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-national-gold/20 hover:border-national-gold/40 bg-national-gold/5"
                   />
-                  <div className="absolute inset-0 bg-national-navy/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                    <div className="bg-white/90 text-national-navy px-3 py-1 rounded-full text-sm font-medium">
-                      Phóng to
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
         )}
       </div>
-
-      {open && activeSrc && (
-        <div
-          className="fixed inset-0 bg-national-navy/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={() => setOpen(false)}
-        >
-          <div className="relative max-w-5xl max-h-[90vh]">
-            <img
-              src={activeSrc}
-              alt={title}
-              className="max-h-[90vh] max-w-full rounded-lg shadow-2xl border border-national-gold/30"
-            />
-            <button
-              className="absolute -top-4 -right-4 bg-national-red text-white w-8 h-8 rounded-full flex items-center justify-center font-bold hover:bg-national-red-dark transition-colors duration-200 shadow-lg"
-              onClick={() => setOpen(false)}
-            >
-              ×
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

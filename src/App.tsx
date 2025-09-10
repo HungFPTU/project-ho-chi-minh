@@ -12,7 +12,7 @@ export default function App() {
     <div className="min-h-screen bg-dignified-bg font-serif">
       <header className="sticky top-0 z-50 bg-national-navy/95 backdrop-blur border-b border-national-gold/20 shadow-lg">
         <div className="w-full max-w-full px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-          <div className="font-extrabold text-national-gold text-base sm:text-lg md:text-xl font-display tracking-wide">
+          <div className="font-bold text-national-gold text-base sm:text-lg md:text-xl font-display tracking-wide select-none">
             Tư Tưởng Hồ Chí Minh
           </div>
 
@@ -40,7 +40,7 @@ export default function App() {
           <nav className="hidden md:flex gap-6 text-sm">
             <button
               onClick={() => setCurrentPage("co-so-hinh-thanh")}
-              className={`transition-colors duration-300 hover:underline decoration-national-gold underline-offset-4 ${
+              className={`transition-colors duration-300 hover:underline decoration-national-gold underline-offset-4 font-medium select-none ${
                 currentPage === "co-so-hinh-thanh"
                   ? "text-national-gold font-semibold"
                   : "text-national-gold-light hover:text-national-gold"
@@ -50,7 +50,7 @@ export default function App() {
             </button>
             <button
               onClick={() => setCurrentPage("qua-trinh-hinh-thanh")}
-              className={`transition-colors duration-300 hover:underline decoration-national-gold underline-offset-4 ${
+              className={`transition-colors duration-300 hover:underline decoration-national-gold underline-offset-4 font-medium select-none ${
                 currentPage === "qua-trinh-hinh-thanh"
                   ? "text-national-gold font-semibold"
                   : "text-national-gold-light hover:text-national-gold"
@@ -70,7 +70,7 @@ export default function App() {
                   setCurrentPage("co-so-hinh-thanh");
                   setIsMobileMenuOpen(false);
                 }}
-                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 ${
+                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-medium select-none ${
                   currentPage === "co-so-hinh-thanh"
                     ? "bg-national-gold/20 text-national-gold font-semibold"
                     : "text-national-gold-light hover:bg-national-gold/10 hover:text-national-gold"
@@ -83,7 +83,7 @@ export default function App() {
                   setCurrentPage("qua-trinh-hinh-thanh");
                   setIsMobileMenuOpen(false);
                 }}
-                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 ${
+                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-medium select-none ${
                   currentPage === "qua-trinh-hinh-thanh"
                     ? "bg-national-gold/20 text-national-gold font-semibold"
                     : "text-national-gold-light hover:bg-national-gold/10 hover:text-national-gold"

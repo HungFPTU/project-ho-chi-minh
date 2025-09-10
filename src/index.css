@@ -1,12 +1,30 @@
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Times New Roman', 'Georgia', serif;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   background-color: #F8F6F0;
   color: #1B2631;
   line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure proper font rendering */
+* {
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Improve font loading */
+.display-font {
+  font-family: 'Playfair Display', 'Times New Roman', 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* Custom scrollbar for solemn atmosphere */
@@ -58,6 +76,29 @@ body {
   outline-offset: 2px;
 }
 
+/* Lightbox improvements */
+.lightbox-overlay {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Image hover effects */
+.image-hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Prevent image selection */
+.image-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* Mobile optimizations */
 @media (max-width: 640px) {
   /* Improve touch targets */
@@ -70,6 +111,13 @@ body {
   body {
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  /* Center images properly on mobile */
+  .mobile-image-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   /* Reduce motion for better performance on mobile */

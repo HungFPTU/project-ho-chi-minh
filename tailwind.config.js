@@ -28,8 +28,9 @@ export default {
         'solemn-accent-light': '#D2B48C',
       },
       fontFamily: {
-        'serif': ['Times New Roman', 'serif'],
-        'display': ['Georgia', 'serif'],
+        'sans': ['Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        'serif': ['Times New Roman', 'Georgia', 'serif'],
+        'display': ['Playfair Display', 'Times New Roman', 'Georgia', 'serif'],
       }
     }
   },
