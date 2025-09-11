@@ -46,7 +46,7 @@ export default function App() {
                   : "text-national-gold-light hover:text-national-gold"
               }`}
             >
-              Cơ sở hình thành
+              Cơ sở thực tiễn
             </button>
             <button
               onClick={() => setCurrentPage("qua-trinh-hinh-thanh")}
